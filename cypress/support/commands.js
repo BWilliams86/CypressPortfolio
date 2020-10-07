@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("search", (searchTerm) => {
+    cy.visit('https://www.barnesandnoble.com/');
+    cy.get(`[id="searchBarBN"]`).type(searchTerm);
+    cy.get('.icon-search-2').click();
+    cy.wait(6000);
+})
