@@ -1,5 +1,5 @@
 describe('Visits book store and finds cheapest book', () => {
-    it.skip('Visits book store and finds cheapest book', () => {
+    it('Visits book store and finds cheapest book', () => {
         cy.search('Ursula Le Guin');
         cy.get(`[id="sortProducts1-replacement"]`).click();
         cy.get(`[id="sortProducts1-option-4"]`).click();
