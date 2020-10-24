@@ -1,13 +1,14 @@
 import { visit, fillSearch, searchSubmit } from '../../page/homeObj';
-import { visitEachChild } from 'typescript';
+import { sortDropdown, sortSelects } from '../../page/searchResultsPageObj';
 
 describe('Visits book store and finds cheapest book', () => {
     it('Visits book store and finds cheapest book', () => {
         visit();
         fillSearch('Ursula Le Guin');
         searchSubmit();
-        cy.get(`[id="sortProducts1-replacement"]`).click();
-        cy.get(`[id="sortProducts1-option-4"]`).click();
+        // cy.get(`[id="sortProducts1-replacement"]`).click();
+        sortDropdown.click();
+        cy.get(sortSelects.PRICE_LOW).click();
     });
 
     it.skip('Visits book store and adds 3 books to cart', () => {
