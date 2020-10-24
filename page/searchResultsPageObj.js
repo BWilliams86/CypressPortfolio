@@ -1,6 +1,4 @@
-export const sortDropdown {
-    cy.get(`[id="sortProducts1-replacement"]`);
-};
+export const sortDropdown = `[id="sortProducts1-replacement"]`;
 
 export const sortSelects = {
     TOP_MATCHES: `[id="sortProducts1-option-0"]`,
