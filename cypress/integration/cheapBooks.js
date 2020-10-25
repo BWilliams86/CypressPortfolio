@@ -1,6 +1,6 @@
-import { visit, fillSearch, searchSubmit } from '../../page/homeObj';
-import { sortDropdown, sortSelects } from '../../page/searchResultsPageObj';
-import { cartLink, cartTotal, cartAdd } from '../../page/shoppingCartObj';
+import { visit, fillSearch, searchSubmit } from '../page/homeObj';
+import { sortDropdown, sortSelects } from '../page/searchResultsPageObj';
+import { cartLink, cartTotal, cartAdd } from '../page/shoppingCartObj';
 
 describe('Visits book store and finds cheapest book', () => {
     beforeEach(() => {
